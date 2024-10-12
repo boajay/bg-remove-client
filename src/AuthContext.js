@@ -12,7 +12,7 @@ const AuthProvider = ({ children }) => {
     // Check if user is already logged in
     const checkAuth = async () => {
       try {
-        const response = await fetch('http://localhost:3001/checkAuth',{
+        const response = await fetch('https://bg-remove-api-1.onrender.com/checkAuth',{
             method: 'GET',
             headers: { 
               'Authorization': `Bearer ${localStorage.getItem('token')}` // Add authorization header
