@@ -33,7 +33,9 @@ const MyDropzone = () => {
         auth.currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
           // Send token to your backend via HTTPS
           // formData.append('idToken', idToken);
-          axios.post('https://bg-remove-api-1.onrender.com/removebgandcrop', formData, {
+          
+          axios.post('/removebgandcrop', formData, {
+            baseURL:'https://bg-remove-api-1.onrender.com',
             responseType: 'blob',
             headers: {
               'x-signature': signature,
