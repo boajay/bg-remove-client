@@ -10,6 +10,8 @@ import Header from './Header';
 import Footer from './Footer';
 import { auth } from './firebase';
 
+const API_URL = 'https://bg-remove-api-1.onrender.com';
+
 const MyDropzone = () => {
   const { user } = useContext(UserContext);
   const [downloadProgress, setDownloadProgress] = useState(0);
